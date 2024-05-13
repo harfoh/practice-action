@@ -10,6 +10,8 @@ jobs:
             uses: actions/setup-node@v4
             with:
                 node-version: 18
+        -   name: Install dependencies
+            run: npm install        
         -   name: linting
             run: npm run lint
     test:
@@ -22,6 +24,8 @@ jobs:
                 uses: actions/setup-node@v4
                 with: 
                     node-version: 18
+            -   name: Install dependencies
+                run: npm install            
             -   name: run test
                 run: npm run test
     build:
@@ -34,5 +38,7 @@ jobs:
                 uses: actions/setup-node@v4
                 with:
                     node-version: 18
+            -   name: Install dependencies
+                run: npm install
             -   name: build 
                 run: npm run build
